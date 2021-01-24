@@ -5,5 +5,6 @@ WORKDIR /code
 COPY . /code
 RUN bundle install
 
-CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0", "-p", $PORT]
+#CMD ["bundle", "exec", "rackup", "--host", "0.0.0.0"]
+CMD ["bundle", "exec", "ruby", "./app.rb"]
 
